@@ -23,12 +23,14 @@ export interface Role {
 export interface Event {
     id: number;
     name: string;
-    description?: string;
-    datetime: string;
-    location?: string;
+    description: string;
+    starttime: string;
+    location: string;
     group_id: number;
-    duration?: string;
+    endtime: string;
+    GROUP: Group;
 }
+
 
 export interface UserGroup {
     user_id: number;

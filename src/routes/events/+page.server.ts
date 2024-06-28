@@ -1,5 +1,6 @@
-// src/routes/events/+page.server.js
+// src/routes/events/+page.server.ts
 import { supabase } from '$lib/supabaseClient';
+import type { Event } from '$lib/types';
 
 export async function load() {
     try {
@@ -16,7 +17,8 @@ export async function load() {
                 GROUP (
                     name
                 )
-            `);
+            `)
+            .order('starttime', { ascending: true }); // Sort events chronologically
 
         if (error) {
             console.error('Error fetching events:', error);
@@ -26,10 +28,8 @@ export async function load() {
             };
         }
 
-        console.log('Fetched events:', events);
-
         return {
-            events: events ?? [],
+            events: events || []
         };
     } catch (err) {
         console.error('Unexpected error:', err);

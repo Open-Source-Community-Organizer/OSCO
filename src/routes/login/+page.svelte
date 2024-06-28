@@ -32,6 +32,7 @@
                     <div class="dropdown-menu"><a class="dropdown-item" href="/admin">Admin Console</a><a class="dropdown-item" href="/sysadmin">System Admin</a><a class="dropdown-item" href="/profile">Profile Page</a><a class="dropdown-item" href="/logout">Logout</a></div>
                 </div><button class="btn btn-secondary dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false" data-bs-toggle="dropdown" style="margin-right: 32px;">Yanliang</button>
         </div>
+        </div>
     </nav>
     <section class="py-5">
         <div class="container py-5">
